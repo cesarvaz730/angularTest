@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  url: 'http://api-ligacoes-agnlig-dev.appls.cmpn.paas.gsnetcloud.corp'
 };

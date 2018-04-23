@@ -1,3 +1,31 @@
-<h1>
-  {{title}}
-</h1>
+<header>
+  <nav class="navbar shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="/assets/img/logo-santander.jpg" width="137" height="40" alt="Santander">
+      </a>
+      <a (click)="lgModal.show()" tooltip="Filtre os dados" placement="left">
+        <i class="fa fa-sliders"></i>
+      </a>
+    </div>
+  </nav>
+</header>
+<div *ngIf="this.filter.ano != '' || this.filter.mesNum != '' || this.filter.semanaMes != '' || this.filter.diaSemana != '' || this.filter.rede != '' || this.filter.regional != '' || this.filter.tipo != '' || this.filter.uniorg != '' || this.filter.nome != '' || this.filter.ramal != '' || this.filter.duracao != '' || this.filter.horaLigacao != '' || this.filter.porte != '' || this.filter.numeroEntrada != ''" class="filter-active">
+    <strong>Filtro ativo:</strong>
+    <span *ngIf="this.filter.referencia != ''">Referência: {{ this.filter.referencia }} |</span>
+    <span *ngIf="this.filter.ano != ''">Ano: {{ this.filter.ano }} |</span>
+    <span *ngIf="this.filter.mesNum != ''">Mês: {{ this.filter.mesNum }} |</span>
+    <span *ngIf="this.filter.semanaMes != ''">Semana: {{ this.filter.semanaMes }} |</span>
+    <span *ngIf="this.filter.diaSemana != ''">Dia: {{ this.filter.diaSemana }} |</span>
+    <span *ngIf="this.filter.rede != ''">Rede: {{ this.filter.rede }} |</span>
+    <span *ngIf="this.filter.regional != ''">Regional: {{ this.filter.regional }} |</span>
+    <span *ngIf="this.filter.tipo != ''">Tipo: {{ this.filter.tipo }} |</span>
+    <span *ngIf="this.filter.uniorg != ''">Agência: {{ this.filter.uniorg }} |</span>
+    <span *ngIf="this.filter.nome != ''">Atendimento/Usuário: {{ this.filter.nome }} |</span>
+    <span *ngIf="this.filter.ramal != ''">URA/Ramal Direto: {{ this.filter.ramal }} |</span>
+    <span *ngIf="this.filter.duracao != ''">Duração: {{ this.filter.duracao }} |</span>
+    <span *ngIf="this.filter.horaLigacao != ''">Hora/Inicio: {{ this.filter.horaLigacao }} |</span>
+    <span *ngIf="this.filter.porte != ''">Porte: {{ this.filter.porte }} |</span>
+    <span *ngIf="this.filter.numeroEntrada != ''">Chamador/Telefone: {{ this.filter.numeroEntrada }} |</span>
+  </div>
+<app-home></app-home>
